@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background: #e7e7e7b9;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #6557bf33;
+    background: #fff;
+
+    .divisao_logo {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+
+        .img_logo {
+            width: 1.5rem;
+            margin: 0 .25rem 0 0;
+        }
+    }
+
+    .divisao_links {
+        .links {
+            .menu {
+                display: flex;
+
+                .item {
+                    padding: .75rem;
+                    text-align: center;
+                    margin: 0 .25rem;
+                    border-radius: .5rem;
+                    cursor: pointer;
+                    border: 1px solid #6557bf33;
+                    background: #fff;
+                    transition: all .25s;
+
+                    &:hover {
+                        background: #ececec;
+                    }
+
+                    .link {
+
+                        .icone_link {
+                            font-size: 1.25rem;
+                            color:#242424ec;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.clicker_upgrades {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 5rem;
+
+    .clickers {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .divisao_coins {
+            text-align: center;
+            font-weight: bold;
+            background: #fff;
+            padding: 1rem 8rem;
+            border-radius: .5rem;
+            border: 1px solid #6557bf33;
+
+            .paragrafo_coins {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .coins {
+                    font-size: 1.75rem;
+                }
+    
+                .img_coins {
+                    width: 2rem;
+                }
+            }
+            
+
+            .coins_perSecond {
+                font-weight: bold;
+                font-size: 1.25rem;
+                margin: 0 .35rem 0 0;
+            }
+
+            .texto_perSecond {
+                font-weight: 400;
+            }
+        }
+
+        .divisao_mainCoin {
+            margin: 1rem 0 0 0;
+
+            .main_coin {
+                width: 18rem;
+                max-width: auto;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(0.99);
+                }
+            }
+        }
+
+        .divisao_gemas {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            border: 1px solid #6557bf33;
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            margin: 1.5rem;
+
+            .divisao_gema {
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                background: #fff;
+                margin: .5rem;
+                padding: .5rem;
+                border: 1px solid #6557bf33;
+                border-radius: .5rem;
+                cursor: pointer;
+
+                &:active {
+                    transform: scale(.95);
+                }
+
+                .img_gema {
+                    width: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .upgrades {
+        display: flex;
+        flex-direction: column;
+        height: 35rem;
+        overflow: hidden;
+        overflow-y: scroll;
+        border: 1px solid #6557bf33;
+        padding: 1.5rem;
+        border-radius: .25rem;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #00000031;
+            border-radius: .25rem;
+        }
+
+        .upgrade {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background: #fff;
+            width: 25rem;
+            height: 12rem;
+            margin: .5rem;
+            border: 1px solid #6557bf33;
+            border-radius: .5rem;
+
+            .divisao_esquerda {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .img_upgrade {
+                    width: 7rem;
+                    margin: .25rem;
+                }
+
+                .quantidade_upgrade {
+                    padding: 1rem;
+                    font-weight: bold;
+                    color: #242424ec;
+                }
+            }
+
+            .divisao_direita {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .titulo_upgrade {
+                    font-weight: bold;
+                    margin: 0 0 .25rem 0;
+                }
+                .button_upgrade {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #3c34c4;
+                    background: #3c34c4;
+                    color: #fff;
+                    cursor: pointer;
+                    font-weight: bold;
+                    width: 6rem;
+                    height: 2.25rem;
+                    border-radius: .2rem;
+                    font-size: 1rem;
+
+                    &:active {
+                        transform: scale(0.95);
+                    }
+
+                    .img_coin_upgrade {
+                        width: 1rem;
+                        margin: 0 0 0 .15rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem auto 1rem auto;
+    border: 1px solid #6557bf33;
+    max-width: max-content;
+    flex-wrap: wrap;
+    border-radius: .5rem;
+    padding: 1rem;
+
+    .recompensa_bau {
+        overflow: hidden;
+        background: #fff;
+        width: 20rem;
+        height: 11.8rem;
+        border: 1px solid #6557bf33;
+        border-radius: .5rem;
+        text-align: center;
+        padding: 1rem;
+        margin: 1rem;
+
+        .divisao_bau {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .img_recompensa {
+                width: 6.5rem;
+            }
+
+            .divisao_informacao {
+                
+                .nome {
+                    font-size: .95rem;
+                    font-weight: bold;
+                }
+                .raridade {
+                    display: flex;
+                    align-items: center;
+                    margin: 0 0 .5rem 0;
+                    
+                    .nome_raridade {
+                        font-size: .85rem;
+                        font-weight: 600;
+                    }
+
+                    .raridade_comum {
+                        color: #5a5a5a;
+                        
+                    }
+
+                    .indicador_raridade_comum {
+                        background: #5a5a5a;
+                    }
+
+                    .raridade_incomum {
+                        color: #00aa4c;
+                    }
+
+                    .indicador_raridade_incomum {
+                        background: #00aa4c;
+                    }
+
+                    .raridade_rara {
+                        color: #008ec1;
+                    }
+
+                    .indicador_raridade_rara {
+                        background: #008ec1;
+                    }
+                    
+                    .raridade_epica {
+                        color: #ac00e6;
+                    }
+
+                    .indicador_raridade_epica {
+                        background: #ac00e6;
+                    }
+
+                    .raridade_lendaria {
+                        color: #db9e1c;
+                    }
+
+                    .indicador_raridade_lendaria {
+                        background: #db9e1c;
+                    }
+
+                    .raridade_mitica {
+                        color: #ffd700;
+                        
+                    }
+
+                    .indicador_raridade_mitica {
+                        background: #ffd700;
+                    }
+
+                    .indicador_raridade {
+                        width: .85rem;
+                        height: .85rem;
+                        border-radius: 50%;
+                        margin: 0 0 0 .2rem;
+                    } 
+                    
+                }
+                .button_recompensa {
+                    padding: 0.55rem 1rem;
+                    font-size: .85rem;
+                    border: none;
+                    color: #fff;
+                    border-radius: 0.2rem;
+                    cursor: pointer;
+                    background: #3c34c4;
+                    font-weight: bold;
+                    display: flex;
+                    align-items: center;
+
+                    .coin_buttonRecompensa {
+                        width: 1.25rem;
+                        margin: 0 0 0 .25rem;
+                    }
+                }
+            }
+        }
+
+        .seta_recompensa {
+            text-align: center;
+            margin: 1rem 0 0 0;
+            padding: 1rem 50% 1rem 50%;
+            cursor: pointer;
+        }
+
+        .divisao_recompensa {
+            font-weight: bold;
+            margin: 2rem 0 0 0;
+
+            .recompensa {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .coin_recompensa {  
+                    width: 1.25rem;
+                }
+            }
+        }
+    }
+}
+
+.secao_conquista {
+    width: 50rem;
+    height: max-content;
+    background: #fff;
+    border-radius: .5rem;
+    border: 1px solid #6557bf33;
+    box-shadow: #63636333 0px 2px 8px 0px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 0 1rem 0;
+    display: none;
+
+    .fechar_conquistas {
+        position: absolute;
+        top: 1rem;
+        right: 1.25rem;
+        font-size: 1.25rem;
+        cursor: pointer;
+
+        &:hover {
+            color: #e03131;
+        }
+    }
+
+    .linha_conquista {
+        width: 100%;
+        height: .1rem;
+        background: #f0f1f3;
+        position: absolute;
+        top: 3.25rem;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: .75rem 1rem .75rem 1rem;
+        color: #343a40;
+    }
+
+    .conquistas {
+
+        .conquista {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-radius: .5rem;
+            margin: 1rem 1.5rem 1.5rem 1.5rem;
+            box-shadow: #0000001a 0px 1px 3px 0px, #0000000f 0px 1px 2px 0px;
+
+            &:first-child {
+                margin: 2rem 1.5rem 1.5rem 1.5rem;
+            }
+
+            .divisao_titulo {
+
+                .titulo_conquista {
+                    font-weight: 700;
+                }
+
+                .subtitulo {
+                    font-size: .85rem;
+                    color: #000000cc;
+                }
+            }
+
+            .divisao_recompensa_conquista {
+                display: flex;
+                align-items: center;
+                
+                .quantidade_recompensa_conquista {
+                    margin: 0 .5rem 0 0;
+                    
+                }
+
+                .img_recompensa_conquista {
+                    width: 2.5rem;
+                    
+                }
+
+                .check_conquista {
+                    font-size: 2rem;
+                    margin: 0 0 0 .5rem;
+                    color: #343a40;
+                }
+            }
+        }
+    }
+}
