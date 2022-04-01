@@ -44,6 +44,11 @@ button {
             .menu {
                 display: flex;
 
+                .botao_conquistas {
+                    border: none;
+                    background: none;
+                }
+
                 .item {
                     padding: .75rem;
                     text-align: center;
@@ -247,8 +252,9 @@ button {
 
 .loja {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    flex-direction: column;
     margin: 10rem auto 1rem auto;
     border: 1px solid #6557bf33;
     max-width: max-content;
@@ -257,14 +263,12 @@ button {
     padding: 1rem;
 
     .recompensa_bau {
-        overflow: hidden;
         background: #fff;
-        width: 20rem;
-        height: 11.8rem;
+        width: 22.25rem;
         border: 1px solid #6557bf33;
         border-radius: .5rem;
         text-align: center;
-        padding: 1rem;
+        padding: 1.5rem 1.5rem 1.25rem 1.5rem;
         margin: 1rem;
 
         .divisao_bau {
@@ -273,11 +277,11 @@ button {
             justify-content: space-evenly;
 
             .img_recompensa {
-                width: 6.5rem;
+                width: 6rem;
             }
 
             .divisao_informacao {
-                
+
                 .nome {
                     font-size: .95rem;
                     font-weight: bold;
@@ -372,26 +376,35 @@ button {
 
         .seta_recompensa {
             text-align: center;
-            margin: 1rem 0 0 0;
-            padding: 1rem 50% 1rem 50%;
+            padding: 1rem 50% 0rem 50%;
             cursor: pointer;
         }
 
         .divisao_recompensa {
             font-weight: bold;
-            margin: 2rem 0 0 0;
+            opacity: 0;
+            max-height: 0;
+            transition: ease-in-out 0.2s;
 
             .recompensa {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                
 
                 .coin_recompensa {  
                     width: 1.25rem;
                 }
             }
         }
+        .divisao_recompensa.recompensaOpen {
+            opacity: 1;
+            max-height: max-content;
+            margin: 1rem 0 0 0;
+        }
     }
+
+    
 }
 
 .secao_conquista {
@@ -403,10 +416,10 @@ button {
     box-shadow: #63636333 0px 2px 8px 0px;
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: -1000%;
     transform: translate(-50%, -50%);
+    transition: .5s;
     padding: 0 0 1rem 0;
-    display: none;
 
     .fechar_conquistas {
         position: absolute;
@@ -484,4 +497,8 @@ button {
             }
         }
     }
+}
+
+.secao_conquista.secao_conquistaOpen {
+    left: 50%;
 }

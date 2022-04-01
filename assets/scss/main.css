@@ -57,6 +57,11 @@ button {
   display: flex;
 }
 
+.cabecalho .divisao_links .links .menu .botao_conquistas {
+  border: none;
+  background: none;
+}
+
 .cabecalho .divisao_links .links .menu .item {
   padding: .75rem;
   text-align: center;
@@ -317,12 +322,16 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 10rem auto 1rem auto;
   border: 1px solid #6557bf33;
   max-width: -webkit-max-content;
@@ -335,14 +344,12 @@ button {
 }
 
 .loja .recompensa_bau {
-  overflow: hidden;
   background: #fff;
-  width: 20rem;
-  height: 11.8rem;
+  width: 22.25rem;
   border: 1px solid #6557bf33;
   border-radius: .5rem;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1.5rem 1.25rem 1.5rem;
   margin: 1rem;
 }
 
@@ -359,7 +366,7 @@ button {
 }
 
 .loja .recompensa_bau .divisao_bau .img_recompensa {
-  width: 6.5rem;
+  width: 6rem;
 }
 
 .loja .recompensa_bau .divisao_bau .divisao_informacao .nome {
@@ -461,14 +468,16 @@ button {
 
 .loja .recompensa_bau .seta_recompensa {
   text-align: center;
-  margin: 1rem 0 0 0;
-  padding: 1rem 50% 1rem 50%;
+  padding: 1rem 50% 0rem 50%;
   cursor: pointer;
 }
 
 .loja .recompensa_bau .divisao_recompensa {
   font-weight: bold;
-  margin: 2rem 0 0 0;
+  opacity: 0;
+  max-height: 0;
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
 }
 
 .loja .recompensa_bau .divisao_recompensa .recompensa {
@@ -487,6 +496,14 @@ button {
   width: 1.25rem;
 }
 
+.loja .recompensa_bau .divisao_recompensa.recompensaOpen {
+  opacity: 1;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  margin: 1rem 0 0 0;
+}
+
 .secao_conquista {
   width: 50rem;
   height: -webkit-max-content;
@@ -499,11 +516,12 @@ button {
           box-shadow: #63636333 0px 2px 8px 0px;
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: -1000%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: .5s;
+  transition: .5s;
   padding: 0 0 1rem 0;
-  display: none;
 }
 
 .secao_conquista .fechar_conquistas {
@@ -584,5 +602,9 @@ button {
   font-size: 2rem;
   margin: 0 0 0 .5rem;
   color: #343a40;
+}
+
+.secao_conquista.secao_conquistaOpen {
+  left: 50%;
 }
 /*# sourceMappingURL=main.css.map */
