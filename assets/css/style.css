@@ -1,0 +1,16 @@
+@import url(/assets/css/coins.css);
+
+:root {
+     --main-background: #191B1F;
+     --main-color: #FFFFFF;
+     --main-border: 1px solid #FFFFFF50;
+     --main-background-card: #ffffff21;
+     --main-font: 'Montserrat', sans-serif;
+     --main-border-radius: 0.5rem;
+}
+
+body {
+    background: var(--main-background);
+    color: var(--main-color);
+    font-family: var(--main-font);
+}
