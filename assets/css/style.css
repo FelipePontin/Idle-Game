@@ -1,16 +1,30 @@
 @import url(/assets/css/coins.css);
+@import url(/assets/css/upgrades.css);
 
 :root {
      --main-background: #191B1F;
      --main-color: #FFFFFF;
      --main-border: 1px solid #FFFFFF50;
-     --main-background-card: #ffffff21;
+     --main-background-card: #FFFFFF21;
      --main-font: 'Montserrat', sans-serif;
      --main-border-radius: 0.5rem;
+     --color-border-gamePortatil: #FFFFFF4D;
+     --color-border-consolePs4: #3655D1CC;
+     --color-border-celular: #e98bd56b;
+     --color-border-notebook: #FF000066;
+     --color-border-pcGamer: #3F82A7;
+     --color-border-moedaVirtual: #FFE60073;
 }
 
 body {
     background: var(--main-background);
     color: var(--main-color);
     font-family: var(--main-font);
+}
+
+.conteudo__principal {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

@@ -1,0 +1,122 @@
+.secao__upgrades{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+}
+
+.upgrade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-background-card);
+    border-radius: var(--main-border-radius);
+    width: 22rem;
+    height: 10.5rem;
+    margin: 0.85rem;
+    padding: 5rem;
+    position: relative;
+}
+
+.gamePortatil {
+    border: 1px solid var(--color-border-gamePortatil);
+}
+
+.celular {
+    border: 1px solid var(--color-border-celular);
+} 
+
+.consolePs4 {
+    border: 1px solid var(--color-border-consolePs4);
+}
+
+.notebook {
+    border: 1px solid var(--color-border-notebook);
+}
+
+.pcGamer {
+    border: 1px solid var(--color-border-pcGamer);
+}
+
+.moedaVirtual {
+    border: 1px solid var(--color-border-moedaVirtual);
+}
+
+.divisao__imagem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2rem 0 0;
+}
+
+.img__upgrade {
+    width: 7rem;
+}
+
+.quantidade__upgrade, .nome__upgrade {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.divisao__compra {
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+}
+
+.button__upgrade {
+    display: flex;
+    align-items: center;
+    background: var(--main-background-card);
+    border: var(--main-border);
+    padding: 0.65rem 1rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0 0 0;
+    cursor: pointer;
+}
+
+.button__upgrade:active {
+    transform: scale(0.98);
+}
+
+.valor__upgrade {
+    font-weight: bold;
+}
+
+.img__coinUpgrade {
+    width: 1.25rem;
+    margin: 0 0 0 0.25rem;
+}
+
+.upgrade__iluminacao {
+    position: absolute;
+    top: 35px;
+    left: 55px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    filter: blur(50px);
+}
+
+.iluminacao__gamePortatil {
+    background: rgb(255, 255, 255, 0.53);
+}
+
+.iluminacao__celular {
+    background: linear-gradient(180deg, #E98BD4 0%, #5BBDF4 100%);
+}
+
+.iluminacao__consolePs4 {
+    background: #3655D175;
+}
+
+.iluminacao__notebook {
+    background: #FF000038;
+}
+
+.iluminacao__pcGamer {
+    background: #3F82A775;
+}
+
+.iluminacao__moedaVirtual {
+    background: #FFE60075;
+}
