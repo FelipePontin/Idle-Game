@@ -11,7 +11,9 @@
     background: var(--main-background-card);
     border: var(--main-border);
     border-radius: var(--main-border-radius);
-    padding: 0.65rem 7.5rem;
+    width: 20rem;
+    padding: 0.5rem;
+    height: 4.5rem;
     margin: 1rem;
 }
 
