@@ -26,3 +26,19 @@ body {
    flex-wrap: wrap;
    margin: 10% 0 0 0;
 }
+
+.divisao__versao {
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   border: var(--main-border);
+   background: var(--main-background-card);
+   padding: 0.5rem 1rem;
+   margin: 0.25rem;
+   border-radius: var(--main-border-radius);
+}
+
+.versao {
+   color: #ccc;
+   font-size: 0.85rem;
+}
