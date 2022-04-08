@@ -1,32 +1,4 @@
-const coin = document.querySelector(".mainCoin")
-const coinsValue = document.querySelector(".coins")
-const coinsPerSecond = document.querySelector(".perSecond")
-
-const btnPortatil = document.querySelector(".btnPortatil")
-const valorPortatil = document.querySelector(".valor__upgrade__portatil")
-const quantidadePortatil = document.querySelector(".quantidade__portatil")
-
-const btnConsole = document.querySelector(".btnConsole")
-const valorConsole = document.querySelector(".valor__upgrade__console")
-const quantidadeConsole = document.querySelector(".quantidade__console")
-
-const btnCelular = document.querySelector(".btnCelular")
-const valorCelular = document.querySelector(".valor__upgrade__celular")
-const quantidadeCelular = document.querySelector(".quantidade__celular")
-
-const btnNotebook = document.querySelector(".btnNotebook")
-const valorNotebook = document.querySelector(".valor__upgrade__notebook")
-const quantidadeNotebook = document.querySelector(".quantidade__notebook")
-
-const btnPcGamer = document.querySelector(".btnPcGamer")
-const valorPcGamer = document.querySelector(".valor__upgrade__PcGamer")
-const quantidadePcGamer = document.querySelector(".quantidade__PcGamer")
-
-const btnMoedaVirtual = document.querySelector(".btnMoedaVirtual")
-const valorBitcoin = document.querySelector(".valor__upgrade__bitcoin")
-const quantidadeBitcoin = document.querySelector(".quantidade__bitcoin")
-
-var coins = 0
+var coins = 100000
 var perSecond = 0
 
 const valor = {
@@ -51,26 +23,26 @@ const update = () => {
     setInterval(() => {
         document.title = `${coins.toFixed()} Coin Cliker`
 
-        coinsValue.textContent = coins.toFixed()
-        coinsPerSecond.textContent = perSecond.toFixed(1)
+        document.querySelector(".coins").textContent = coins.toFixed()
+        document.querySelector(".perSecond").textContent = perSecond.toFixed(1)
     
-        valorPortatil.textContent = valor.portatil.toFixed()
-        quantidadePortatil.textContent = quantidade.portatil.toFixed()
+        document.querySelector(".valor__upgrade__portatil").textContent = valor.portatil.toFixed()
+        document.querySelector(".quantidade__portatil").textContent = quantidade.portatil.toFixed()
     
-        valorConsole.textContent = valor.console.toFixed()
-        quantidadeConsole.textContent = quantidade.console.toFixed()
+        document.querySelector(".valor__upgrade__console").textContent = valor.console.toFixed()
+        document.querySelector(".quantidade__console").textContent = quantidade.console.toFixed()
     
-        valorCelular.textContent = valor.celular.toFixed()
-        quantidadeCelular.textContent = quantidade.celular.toFixed()
+        document.querySelector(".valor__upgrade__celular").textContent = valor.celular.toFixed()
+        document.querySelector(".quantidade__celular").textContent = quantidade.celular.toFixed()
     
-        valorNotebook.textContent = valor.notebook.toFixed()
-        quantidadeNotebook.textContent = quantidade.notebook.toFixed()
+        document.querySelector(".valor__upgrade__notebook").textContent = valor.notebook.toFixed()
+        document.querySelector(".quantidade__notebook").textContent = quantidade.notebook.toFixed()
     
-        valorPcGamer.textContent = valor.pcGamer.toFixed()
-        quantidadePcGamer.textContent = quantidade.pcGamer.toFixed()
+        document.querySelector(".valor__upgrade__PcGamer").textContent = valor.pcGamer.toFixed()
+        document.querySelector(".quantidade__PcGamer").textContent = quantidade.pcGamer.toFixed()
     
-        valorBitcoin.textContent = valor.bitcoin.toFixed()
-        quantidadeBitcoin.textContent = quantidade.bitcoin.toFixed()
+        document.querySelector(".valor__upgrade__bitcoin").textContent = valor.bitcoin.toFixed()
+        document.querySelector(".quantidade__bitcoin").textContent = quantidade.bitcoin.toFixed()
     }, 1)
 }
 
@@ -140,12 +112,3 @@ const compraBitcoin = () => {
 
 coinsPS()
 update()
-
-coin.addEventListener("click", adicionaCoins)
-
-btnPortatil.addEventListener("click", compraPortatil)
-btnConsole.addEventListener("click", compraConsole)
-btnCelular.addEventListener("click", compraCelular)
-btnNotebook.addEventListener("click", compraNotebook)
-btnPcGamer.addEventListener("click", compraPcGamer)
-btnMoedaVirtual.addEventListener("click", compraBitcoin)

@@ -31,7 +31,7 @@
                 </p>
             </div>
             <div class="divisao__mainCoin">
-                <img class="img__mainCoin mainCoin" src="assets/imagens/Coin.png" alt="Coin">
+                <img class="img__mainCoin mainCoin" onclick="adicionaCoins()" src="assets/imagens/Coin.png" alt="Coin">
             </div>
             <div class="divisao__gema">
                 <div class="gema">
@@ -61,42 +61,12 @@
                 </div>
                 <div class="divisao__compra">
                     <p class="nome__upgrade">Game Portátil</p>
-                    <button class="button__upgrade btnPortatil">
+                    <button class="button__upgrade btnPortatil" onclick="compraPortatil()">
                         <span class="valor__upgrade valor__upgrade__portatil"></span>
                         <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
                     </button>
                 </div>
                 <div class="upgrade__iluminacao iluminacao__gamePortatil"></div>
-            </div>
-
-            <div class="upgrade celular">
-                <div class="divisao__imagem">
-                    <img class="img__upgrade" src="assets/imagens/upgrades/Iphone.png" alt="Iphone">
-                    <span class="quantidade__upgrade quantidade__celular"></span>
-                </div>
-                <div class="divisao__compra">
-                    <p class="nome__upgrade">Celular Potente</p>
-                    <button class="button__upgrade btnCelular">
-                        <span class="valor__upgrade valor__upgrade__celular"></span>
-                        <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
-                    </button>
-                </div>
-                <div class="upgrade__iluminacao iluminacao__celular"></div>
-            </div>
-
-            <div class="upgrade consolePs4">
-                <div class="divisao__imagem">
-                    <img class="img__upgrade" src="assets/imagens/upgrades/PS4.png" alt="PS4">
-                    <span class="quantidade__upgrade quantidade__console"></span>
-                </div>
-                <div class="divisao__compra">
-                    <p class="nome__upgrade">Console PS4</p>
-                    <button class="button__upgrade btnConsole">
-                        <span class="valor__upgrade valor__upgrade__console"></span>
-                        <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
-                    </button>
-                </div>
-                <div class="upgrade__iluminacao iluminacao__consolePs4"></div>
             </div>
 
             <div class="upgrade notebook">
@@ -106,12 +76,27 @@
                 </div>
                 <div class="divisao__compra">
                     <p class="nome__upgrade">Notebook Gamer</p>
-                    <button class="button__upgrade btnNotebook">
+                    <button class="button__upgrade btnNotebook" onclick="compraNotebook()">
                         <span class="valor__upgrade valor__upgrade__notebook"></span>
                         <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
                     </button>
                 </div>
                 <div class="upgrade__iluminacao iluminacao__notebook"></div>
+            </div>
+
+            <div class="upgrade consolePs4">
+                <div class="divisao__imagem">
+                    <img class="img__upgrade" src="assets/imagens/upgrades/PS4.png" alt="PS4">
+                    <span class="quantidade__upgrade quantidade__console"></span>
+                </div>
+                <div class="divisao__compra">
+                    <p class="nome__upgrade">Console PS4</p>
+                    <button class="button__upgrade btnConsole" onclick="compraConsole()">
+                        <span class="valor__upgrade valor__upgrade__console"></span>
+                        <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
+                    </button>
+                </div>
+                <div class="upgrade__iluminacao iluminacao__consolePs4"></div>
             </div>
 
             <div class="upgrade pcGamer">
@@ -121,12 +106,27 @@
                 </div>
                 <div class="divisao__compra">
                     <p class="nome__upgrade">Pc Gamer</p>
-                    <button class="button__upgrade btnPcGamer">
+                    <button class="button__upgrade btnPcGamer" onclick="compraPcGamer()">
                         <span class="valor__upgrade valor__upgrade__PcGamer"></span>
                         <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
                     </button>
                 </div>
                 <div class="upgrade__iluminacao iluminacao__pcGamer"></div>
+            </div>
+
+            <div class="upgrade celular">
+                <div class="divisao__imagem">
+                    <img class="img__upgrade" src="assets/imagens/upgrades/Iphone.png" alt="Iphone">
+                    <span class="quantidade__upgrade quantidade__celular"></span>
+                </div>
+                <div class="divisao__compra">
+                    <p class="nome__upgrade">Celular Potente</p>
+                    <button class="button__upgrade btnCelular" onclick="compraCelular()">
+                        <span class="valor__upgrade valor__upgrade__celular"></span>
+                        <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
+                    </button>
+                </div>
+                <div class="upgrade__iluminacao iluminacao__celular"></div>
             </div>
 
             <div class="upgrade moedaVirtual">
@@ -136,7 +136,7 @@
                 </div>
                 <div class="divisao__compra">
                     <p class="nome__upgrade">Bitcoin</p>
-                    <button class="button__upgrade btnMoedaVirtual">
+                    <button class="button__upgrade btnMoedaVirtual" onclick="compraBitcoin()">
                         <span class="valor__upgrade valor__upgrade__bitcoin"></span>
                         <img class="img__coinUpgrade" src="assets/imagens/Coin.png" alt="Coin">
                     </button>
