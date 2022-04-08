@@ -1,5 +1,7 @@
-var coins = 0
-var perSecond = 0
+const game = {
+    coins: 0,
+    perSecond: 0
+}
 
 const valor = {
     portatil: 15,
@@ -7,7 +9,7 @@ const valor = {
     celular: 500,
     notebook: 1000,
     pcGamer: 2000,
-    bitcoin: 10000,
+    bitcoin: 10000
 }
 
 const quantidade = {
@@ -16,15 +18,15 @@ const quantidade = {
     celular: 0,
     notebook: 0,
     pcGamer: 0,
-    bitcoin: 0,
+    bitcoin: 0
 }
 
 const update = () => {
     setInterval(() => {
-        document.title = `${coins.toFixed(0)} Coin Cliker`
+        document.title = `${game.coins.toFixed(0)} Coin Cliker`
 
-        document.querySelector(".coins").textContent = coins.toFixed(0)
-        document.querySelector(".perSecond").textContent = perSecond.toFixed(1)
+        document.querySelector(".coins").textContent = game.coins.toFixed(0)
+        document.querySelector(".perSecond").textContent = game.perSecond.toFixed(1)
     
         document.querySelector(".valor__upgrade__portatil").textContent = valor.portatil.toFixed(0)
         document.querySelector(".quantidade__portatil").textContent = quantidade.portatil.toFixed(0)
@@ -47,73 +49,73 @@ const update = () => {
 }
 
 const adicionaCoins = () => {
-    coins += 1
+    game.coins += 1
 }
 
 const coinsPS = () => {
     setInterval(() =>{
-        coins += perSecond
+        game.coins += game.perSecond
     }, 1000) 
 }
 
 const compraPortatil = () => {
-    if(coins >= valor.portatil) {
-        coins -= valor.portatil
+    if(game.coins >= valor.portatil) {
+        game.coins -= valor.portatil
         valor.portatil *= 1.1
-        perSecond += 0.1
+        game.perSecond += 0.1
         quantidade.portatil++
     }
 }
 
 const compraConsole = () => {
-    if(coins >= valor.console) {
-        coins -= valor.console
+    if(game.coins >= valor.console) {
+        game.coins -= valor.console
         valor.console *= 1.2
-        perSecond += 1
+        game.perSecond += 1
         quantidade.console++
     }
 }
 
 const compraCelular = () => {
-    if(coins >= valor.celular) {
-        coins -= valor.celular
+    if(game.coins >= valor.celular) {
+        game.coins -= valor.celular
         valor.celular *= 1.3
-        perSecond += 8
+        game.perSecond += 8
         quantidade.celular++
     }
 }
 
 const compraNotebook = () => {
-    if(coins >= valor.notebook) {
-        coins -= valor.notebook
+    if(game.coins >= valor.notebook) {
+        game.coins -= valor.notebook
         valor.notebook *= 1.4
-        perSecond += 47
+        game.perSecond += 47
         quantidade.notebook++
     }
 }
 
 const compraPcGamer = () => {
-    if(coins >= valor.pcGamer) {
-        coins -= valor.pcGamer
+    if(game.coins >= valor.pcGamer) {
+        game.coins -= valor.pcGamer
         valor.pcGamer *= 1.5
-        perSecond += 260
+        game.perSecond += 260
         quantidade.pcGamer++
     }
 }
 
 const compraBitcoin = () => {
-    if(coins >= valor.bitcoin) {
-        coins -= valor.bitcoin
+    if(game.coins >= valor.bitcoin) {
+        game.coins -= valor.bitcoin
         valor.bitcoin *= 1.6
-        perSecond += 1400
+        game.perSecond += 1400
         quantidade.bitcoin++
     }
 }
 
 const saveGame = () => {
     var gameSave = {
-        coins: coins,
-        perSecond: perSecond,
+        coins: game.coins,
+        perSecond: game.perSecond,
         valorPortatil: valor.portatil,
         quantidadePortatil: quantidade.portatil,
         valorConsole: valor.console,
@@ -134,8 +136,8 @@ const loadGame = () => {
     var savedGame = JSON.parse(localStorage.getItem("gameSave"))
 
     if (localStorage.getItem("gameSave") !== null) {
-        if (typeof savedGame.perSecond !== "undefined") coins = savedGame.coins
-        if (typeof savedGame.perSecond !== "undefined") perSecond = savedGame.perSecond
+        if (typeof savedGame.perSecond !== "undefined") game.coins = savedGame.coins
+        if (typeof savedGame.perSecond !== "undefined") game.perSecond = savedGame.perSecond
 
         if (typeof savedGame.valorPortatil !== "undefined") valor.portatil = savedGame.valorPortatil
         if (typeof savedGame.quantidadePortatil !== "undefined") quantidade.portatil = savedGame.quantidadePortatil
