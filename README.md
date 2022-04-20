@@ -1,3 +1,3 @@
 # Idle-Game
 
-in progress
+in progress.
